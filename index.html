@@ -49,6 +49,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       const supriseButton = document.querySelector('.suprise-button');
 
+      alert("open!");
       // Check if the element exists
       if (supriseButton) {
           // Add a click event listener
@@ -61,8 +62,6 @@
               surpriseButton.setAttribute('class', 'hidden');
             
           });
-      } else {
-          console.error('Element with class "suprise-button" not found.');
       }
     });
 
