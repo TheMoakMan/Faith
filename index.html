@@ -7,7 +7,7 @@
     </div>
 
     <div style="display:flex; width:100vw; justify-content: center; color:white !important;">
-        <div style="cursor:pointer; border-thickness: 0.5em; border-color:solid black; padding-left:20px; padding-right:20px;">CLICK FOR A SURPRISE</div>
+        <div class="surprise-button">CLICK FOR A SURPRISE</div>
     </div>
     
   </body>
@@ -34,9 +34,39 @@
   }
 
   .embeded-video{
+    display:block;
+  }
+
+  .hidden{
     display:none;
   }
+
+  
   
 </style>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      const supriseButton = document.querySelector('.suprise-button');
+
+      // Check if the element exists
+      if (supriseButton) {
+          // Add a click event listener
+          supriseButton.addEventListener('click', function() {
+              // Your event handling code here
+              alert('Surprise button clicked!');
+
+              // remove the video from being hidden.
+              document.querySelector('.embeded-video').setAttribute('class', 'embeded-video')
+              surpriseButton.setAttribute('class', 'hidden');
+            
+          });
+      } else {
+          console.error('Element with class "suprise-button" not found.');
+      }
+    });
+
+    
+  </script>
   
 </html>
