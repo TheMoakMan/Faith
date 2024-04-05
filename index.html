@@ -9,6 +9,13 @@
     <div style="display:flex; width:100vw; justify-content: center; color:white !important;">
         <div class="surprise-button"><a href="https://www.youtube.com/watch?v=xKtLeM5RC7s">CLICK FOR A SURPRISE</a></div>
     </div>
+
+    <video class="embeded-video hidden" controls width="600" height="400">
+        <!-- Specify the URL of the video using the src attribute -->
+        <source src="https://www.example.com/path/to/video.mp4" type="video/mp4">
+        <!-- Optionally, provide fallback content for browsers that do not support HTML5 video -->
+        Your browser does not support the video tag.
+    </video>
     
   </body>
 
@@ -49,9 +56,9 @@
     document.addEventListener('DOMContentLoaded', function() {
       const supriseButton = document.querySelector('.suprise-button');
 
-      alert("open!");
       // Check if the element exists
       if (supriseButton) {
+          alert('Surprise button!');
           // Add a click event listener
           supriseButton.addEventListener('click', function() {
               // Your event handling code here
